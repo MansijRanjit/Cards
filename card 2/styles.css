@@ -2,69 +2,74 @@
     margin: 0;
     padding: 0;
   }
+body{
+    background-color: #343D33;
+}
+.wrap{
+    padding:96px 0px;
+    display: flex;
+    justify-content: center;
+}
 
 .maincontainer{
-    max-width: 376px;
-    max-height: 823px;
-    padding: 53px 16px 63px 16px ;
-    background-color: #343D33;
+    display: flex;
+    flex-direction: row;
+    max-width: 1040px;
     box-sizing: border-box;
+    justify-content: space-between;
+    align-items: top;
+    flex-wrap: wrap;
+    margin:0 auto;
 }
 
 .container-1{
-    max-width: 344px;
-    max-height: 235px; 
-}
-
-.container-1 img{
-    max-height: 100%;
-    max-width: 100%;
-    /* object-fit: contain; */
+    order: 1;
+    max-width: 534px;
 }
 
 .container-2{
-    max-width: 344px;
-    max-height: 148px;
-    margin-top: 16px;
+    max-width: 417px;
+    order: 2;
+    margin-top: 17px;
 }
 
-.container-2 img{
-    max-height: 100%;
-    max-width: 100%;
-}
 
-.container-3{
-    max-width: 344px;
-    max-height: 186px;
-    margin-top: 40px;
-}
-
-.container-3 h1{
+.container-2 h1{
     text-align: center;
     color: white;
     font-family: Libre Baskerville;
     font-size: 34px;
+    font-weight: 400;
     font-style: normal;
+    line-height: 110%; 
+    text-transform: capitalize;
 }
 
-.container-3 p{
+.container-2 p{
     margin-top: 16px;
     text-align: center;
     color: white;
     font-family: Roboto;
+    margin-top: 16px;
+    margin-right: 16px;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
 }
 
-.container-4{
-    max-width: 165px;
-    max-height:46px;
-    margin:32px 89px 59.5px 90px;
-    box-sizing: border-box;
+.container-2 button{
+    margin-top: 32px;
+    margin-right: 216px;
 
-}
-.container-4 button{
-    width: 100%;
-    height: 100%;
+    display: inline-flex;
     padding: 15px 30px;
+    align-items: center;
+    /* gap: 10px; */
+
+    max-width: 165px;
+    box-sizing: border-box;
     align-items: center;
     color: #fff;
     border: 2px solid white;
@@ -73,65 +78,60 @@
     background-color: #343D33;
 }
 
-/* For mobile phones */
+.container-3{
+    max-width: 1040px;
+    order: 3;
+    margin-top: 80px;
+}
+
+/*For Desktop*/
     [class*="container-"]{
         width: 100%;
     }
 
-@media only screen and (min-width:575px){
-   
-    .maincontainer{
-        max-width: 200%;
-        max-height: 144%;
-        padding: 56px 105px 104px 106px ;
+/* For tablets */
+@media(max-width:1024px){
+   .maincontainer{
+    flex-direction: column;
+   }
 
-    }
-    /* .maincontainer{
-        max-width: 745x;
-        max-height: 1189px;
-        padding: 56px 105px 104px 106px ;
-        background-color: #343D33;
-        box-sizing: border-box;
-    } */
-    
-    .container-1{
-        max-width: 155%;
-        max-height: 150%; 
-    }
-    /* .container-1{
-        max-width: 534px;
-        max-height: 354px; 
-    } */
-    .container-1 img{
-        max-height:100%;
-        max-width:100%;
-    }
-    .container-2{
-        max-width: 155%;
-        max-height: 142%;
-        margin-top: 24px;
-    }
-    /* .container-2{
-        max-width: 5344px;
-        max-height: 211px;
-        margin-top: 40px;
-    } */
+   .container-1{
+    max-width: 534px;
+   }
 
-    .container-3{
-        margin-top: 20px;
-        margin-right: 117px;
-    } 
-    /* .container-3{
-        max-width: 344px;
-        max-height: 186px;
-        margin: 60px 117px 0px 0px;
-    } */
+   .container-3{
+    margin-top: 40px;
+    order: 2;
+    max-width: 534px;
+   }
 
+   .container-2{
+    margin-top: 60px;
+    order:3;
+   }
     
-    /* .container-4{
-        margin:32px 216px 104px 0px;
-        border: 2px solid white;
-        box-sizing: border-box;
-    
-    } */
 }
+
+/* For Mobile*/
+@media(max-width:575px){
+    .maincontainer{
+     flex-direction: column;
+     max-width: 344px;
+
+    }
+ 
+    .container-3{
+     margin-top: 16px;
+     order: 2;
+     max-width: 534px;
+    }
+ 
+    .container-2{
+     margin-top: 40px;
+     order:3;
+    }
+     
+    .container-2 button{
+        margin: 32px 90px;
+    }
+ }
