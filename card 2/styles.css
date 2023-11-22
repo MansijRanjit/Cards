@@ -84,10 +84,18 @@ body{
     margin-top: 80px;
 }
 
-/*For Desktop*/
-    [class*="container-"]{
-        width: 100%;
-    }
+.plant-accent{
+    position: fixed;
+    z-index: -1;
+    bottom: 25%;
+    right: 0%;
+}
+.plant-accent img{
+    max-width: 534px;
+    max-height: 462px;
+    object-fit: contain;
+    transform: translate(20%,0%);
+}
 
 /* For tablets */
 @media(max-width:1024px){
@@ -108,6 +116,12 @@ body{
    .container-2{
     margin-top: 60px;
     order:3;
+   }
+
+   .plant-accent img{
+    max-width: 342px;
+    max-height: 357px;
+    transform: translate(25%,95%);
    }
     
 }
@@ -133,5 +147,10 @@ body{
      
     .container-2 button{
         margin: 32px 90px;
+    }
+
+    .plant-accent img{
+        max-width: 195px;
+        max-height: 188px;
     }
  }
